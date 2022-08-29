@@ -25,7 +25,7 @@ const recipes: Recipe[] =
         "Season with salt & pepper to taste. ",
         "Serve over quinoa or brown rice. "
       ],
-      "photo": "chickpeacurry.jpeg"
+      "photo": "chickpeacurry.jpg"
     },
     {
       "id": 2,
@@ -45,35 +45,35 @@ const recipes: Recipe[] =
         "Blend the ingredients in a blender. ",
         "Cook pancakes on the stove over medium heat. "
       ],
-      "photo": "bananapancakes.jpeg"
+      "photo": "bananapancakes.jpg"
     },
     {
       "id": 3,
       "title": "Almond Flour Bread",
       "ingredients": ["asdf", "asdf"],
       "instructions": ["asdf3", "asdf3"],
-      "photo": "almondflourbread.jpeg"
+      "photo": "almondflourbread.jpg"
     },
     {
       "id": 4,
       "title": "Sweet Potato Salad",
       "ingredients": ["asdf", "asdf"],
       "instructions": ["asdf4", "asdf4"],
-      "photo": "sweetpotatosalad.jpeg"
+      "photo": "sweetpotatosalad.jpg"
     },
     {
       "id": 5,
       "title": "Lemon Muffins",
       "ingredients": ["asdf", "asdf"],
       "instructions": ["asdf5", "asdf5"],
-      "photo": "lemonmuffins.jpeg"
+      "photo": "lemonmuffins.jpg"
     },
     {
       "id": 6,
       "title": "Chicken Casserole",
       "ingredients": ["asdf", "asdf"],
       "instructions": ["asdf6", "asdf6"],
-      "photo": "chickencasserole.jpeg"
+      "photo": "chickencasserole.jpg"
     }
   ];
 
