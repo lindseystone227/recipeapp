@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import './index.css';
-import App from './App';
+import Recipes from './Recipes';
+import Recipe from './Recipe';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +15,12 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Recipes />}/>
+        <Route path="/recipes/:id" element={<Recipe />}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
