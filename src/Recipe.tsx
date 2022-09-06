@@ -1,29 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+// import { useParams } from 'react-router-dom';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
-import { fetchee } from './helpers';
 
-function Recipe() {
-  const params = useParams();
-  const [recipe, setRecipe] = useState<recipeType | null>(null);
+interface RecipeProps{
+  recipe: recipeType;
+}
 
-  useEffect(() => {
-    fetchee(`http://localhost:3001/recipes/${params.id}`).then((result) =>
-      result.json()
-    ).then((result) => {
-      setRecipe(result);
-    });
-  }, [ params.id ]);
+function Recipe(props: RecipeProps) {
+  // const params = useParams();
+
   return (
     <div>
       {
-        recipe && (  
-          <Accordion defaultActiveKey={['0']} alwaysOpen>
+         (  
+          <div className="accordionParent">
+          <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
-              <ul>{ recipe.ingredients.map((ingredient: string) => 
+              <ul>{ props.recipe.ingredients.map((ingredient: string) => 
                 ( <li>{ ingredient }</li> ))
               }
               </ul>
@@ -32,13 +28,14 @@ function Recipe() {
           <Accordion.Item eventKey="1">
             <Accordion.Header>Instructions</Accordion.Header>
             <Accordion.Body>
-              <ol>{ recipe.instructions.map((instruction: string) =>
+              <ol>{ props.recipe.instructions.map((instruction: string) =>
                   ( <li>{ instruction }</li>)) 
                 }
-                </ol>
+              </ol>
             </Accordion.Body>
           </Accordion.Item>
-        </Accordion>    
+        </Accordion> 
+        </div>   
         )
       }
     </div>

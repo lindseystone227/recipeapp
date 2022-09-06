@@ -1,14 +1,19 @@
 h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
+  color: #719973;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  margin-right: 20px;
 }
 
 .carousel {
-  margin-top: 50%;
+  margin-top: 50px;
 }
 
 a {
-  color: white;
+  color: #719973;
   text-decoration: none;
 }
 
@@ -26,6 +31,10 @@ a:active {
 .accordion-button:not(.collapsed) {
   background-color: #719973;
   color: black;
+}
+
+.accordion-header {
+  border-radius: 10px;
 }
 
 :focus {
@@ -48,4 +57,61 @@ a:active {
 
 .searchResults a {
   color: black;
+}
+
+@media (min-width: 451px) and (max-width: 900px) {
+  h3 {
+    margin-right: 40px;
+  }
+  
+  .accordionParent {
+    position: fixed;
+    top: 490px;
+    width: 100%;
+  }
+
+  .photo {
+    position: fixed;
+    top: 90px;
+    max-width: 500px;
+    left: 0px;
+  }
+
+  .carousel {
+    width: 500px;
+    margin-top: 270px;
+  }
+
+  .carousel-indicators {
+    top: 150px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 9999px) {
+  h3 {
+    margin-right: 70px;
+  }
+
+  .imageParent {
+    display: flex;
+  }
+
+  .photo {
+    max-width: 500px;
+    justify-content: flex-start;
+  }
+
+  .accordionParent {
+    display: flex;
+  }
+
+  .accordion {
+    width: calc(100% - 500px);
+    margin-top: -400px;
+    margin-left: 500px;
+  }
+
+  .carousel {
+    width: 500px;
+  }
 }

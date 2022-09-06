@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Recipe } from './recipeType';
 import { Link } from 'react-router-dom';
 import { fetche } from './helpers';
@@ -23,7 +23,11 @@ function Search() {
     <input type='text' placeholder="Search" ref={inputRef} onInput={() => doSearch()}/>
     <div className="searchResults">{
       searches.map((recipe: Recipe) => {
-        return <div className="searchResult" key={recipe.id}><Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link></div>;
+        return <div 
+          className="searchResult" 
+          key={recipe.id}>
+          <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+        </div>;
       })
     }</div>
     </div>
