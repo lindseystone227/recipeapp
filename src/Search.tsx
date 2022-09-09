@@ -26,7 +26,7 @@ function Search() {
         return <div 
           className="searchResult" 
           key={recipe.id}>
-          <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+          <Link to={`/${recipe.id}`}>{recipe.title}</Link>
         </div>;
       })
     }</div>

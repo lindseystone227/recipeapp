@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-// import { Link } from 'react-router-dom';
 import { Recipe } from './recipeType';
 import { Search } from './Search';
 import { fetche } from './helpers';
@@ -8,13 +7,14 @@ import Recipee from './Recipe';
 
 function Recipes() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [currentRecipe, setCurrentRecipe] = useState<Recipe | null>(null); 
+  const [currentRecipe, setCurrentRecipe] = useState<Recipe | null>(); 
 
   useEffect(() => {
     fetche('http://localhost:3001/recipes').then((result) =>
       result.json()
     ).then((result: Recipe[]) => {
       setRecipes(result);
+      setCurrentRecipe(result[0]);
     });
   }, []);
   return (
@@ -47,5 +47,3 @@ function Recipes() {
 }
 
 export default Recipes;
-
-// set the currentRecipe as soon as the carousel loads so it's not blank on the first load

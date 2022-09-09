@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useParams } from 'react-router-dom';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
 
@@ -8,7 +7,6 @@ interface RecipeProps{
 }
 
 function Recipe(props: RecipeProps) {
-  // const params = useParams();
 
   return (
     <div>
