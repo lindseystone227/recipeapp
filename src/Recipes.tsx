@@ -8,6 +8,7 @@ import Recipee from './Recipe';
 function Recipes() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [currentRecipe, setCurrentRecipe] = useState<Recipe | null>(); 
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   useEffect(() => {
     fetche('http://localhost:3001/recipes').then((result) =>
@@ -19,12 +20,18 @@ function Recipes() {
   }, []);
   return (
     <>
-    <Search />
-    <Carousel 
+    <Search onSearch={(recipe: Recipe) => {
+      setCurrentSlide(recipes.indexOf(recipe))
+    }} />
+    <br></br>
+    <br></br>
+    <Carousel
       interval={null} 
       onSlide={(eventKey: number, direction: 'end' | 'start') => {
         setCurrentRecipe(recipes[eventKey])
       }}
+      activeIndex={currentSlide}
+      onSelect={(eventKey: number, event: Record<string, unknown> | null) => {setCurrentSlide(eventKey)}}
     >
       {recipes.map((recipe: Recipe) => (
         <Carousel.Item key={recipe.id}>

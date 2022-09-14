@@ -3,7 +3,11 @@ import { Recipe } from './recipeType';
 import { Link } from 'react-router-dom';
 import { fetche } from './helpers';
 
-function Search() {
+interface SearchProps {
+  onSearch?: (recipe: Recipe) => void;
+}
+
+function Search(props: SearchProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [searches, setSearches] = useState<Recipe[]>([]); 
 
@@ -26,12 +30,14 @@ function Search() {
         return <div 
           className="searchResult" 
           key={recipe.id}>
-          <Link to={`/${recipe.id}`}>{recipe.title}</Link>
+          <div onClick={() => {props.onSearch && props.onSearch(recipe);}}>{recipe.title}</div>
         </div>;
       })
     }</div>
     </div>
   )
 }
+
+//HW: get rid of the search results after one is clicked
 
 export { Search };
