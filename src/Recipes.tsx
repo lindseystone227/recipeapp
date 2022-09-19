@@ -25,6 +25,7 @@ function Recipes() {
     }} />
     <br></br>
     <br></br>
+    <h1>{currentRecipe && currentRecipe.title}</h1>
     <Carousel
       interval={null} 
       onSlide={(eventKey: number, direction: 'end' | 'start') => {
@@ -42,9 +43,6 @@ function Recipes() {
           className="photo"
         />
         </div>
-        <Carousel.Caption>
-          <div className="flex"><h3>{recipe.title}</h3></div>
-        </Carousel.Caption>
       </Carousel.Item>
       ))}
     </Carousel>

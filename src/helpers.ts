@@ -120,6 +120,23 @@ const recipes: Recipe[] =
       "ingredients": ["asdf", "asdf"],
       "instructions": ["asdf6", "asdf6"],
       "photo": "chickencasserole.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Almond Flour Biscuit",
+      "ingredients": [
+        "1/2 cup almond flour", 
+        "2 eggs",
+        "1.5 tsp baking powder",
+        "1/2 tsp olive oil"
+      ],
+      "instructions": [
+        "Mix the ingredients in a small bowl.",
+        "Microwave for 2 minutes.",
+        "Remove the biscuit from the bowl, then place it in a pan over medium heat.",
+        "Cook each side until golden." 
+      ],
+      "photo": "biscuits.jpg"
     }
   ];
 

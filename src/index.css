@@ -1,15 +1,22 @@
-h3 {
+h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #719973;
-  position: fixed;
-  top: 50px;
-  right: 20px;
-  margin-right: 20px;
+  text-align: right;
+  margin-right: 10px;
 }
 
 .carousel {
   margin-top: 50px;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: gray;
+  border-radius: 50%;
 }
 
 a {
@@ -60,10 +67,6 @@ a:active {
 }
 
 @media (min-width: 451px) and (max-width: 900px) {
-  h3 {
-    margin-right: 40px;
-  }
-  
   .accordionParent {
     position: fixed;
     top: 490px;
@@ -88,10 +91,6 @@ a:active {
 }
 
 @media (min-width: 901px) and (max-width: 9999px) {
-  h3 {
-    margin-right: 70px;
-  }
-
   .imageParent {
     display: flex;
   }

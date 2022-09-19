@@ -1,6 +1,7 @@
 import React from 'react';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
+import doubleRecipe from './doubleRecipe';
 
 interface RecipeProps{
   recipe: recipeType;
@@ -21,6 +22,7 @@ function Recipe(props: RecipeProps) {
                 ( <li>{ ingredient }</li> ))
               }
               </ul>
+              <button onClick={doubleRecipe}>Double recipe</button>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
