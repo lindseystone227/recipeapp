@@ -66,6 +66,12 @@ a:active {
   color: black;
 }
 
+.double {
+  width: 70px;
+  height: 20px;
+  border-radius: 10px;
+}
+
 @media (min-width: 451px) and (max-width: 900px) {
   .accordionParent {
     position: fixed;

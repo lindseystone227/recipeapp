@@ -1,7 +1,9 @@
+import { Ingredient } from './helpers';
+
 interface Recipe {
   id: number;
   title: string;
-  ingredients: string[];
+  ingredients: Ingredient[];
   instructions: string[];
   photo: string;
 }

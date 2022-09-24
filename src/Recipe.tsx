@@ -1,7 +1,7 @@
 import React from 'react';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
-// import doubleRecipe from './doubleRecipe';
+import Double from './Double';
 
 interface RecipeProps{
   recipe: recipeType;
@@ -18,11 +18,13 @@ function Recipe(props: RecipeProps) {
           <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
-              <ul>{ props.recipe.ingredients.map((ingredient: string) => 
-                ( <li>{ ingredient }</li> ))
-              }
+              <ul>{ props.recipe.ingredients.map((ingredient) => 
+                ( <li>{ 
+                    ingredient.qty ? `${(ingredient.qty)} ${ingredient.desc}` : ingredient.desc
+                 }</li> ))
+                }
               </ul>
-              {/* <button onClick={doubleRecipe}>Double recipe</button> */}
+              <Double recipe={props.recipe}/>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
