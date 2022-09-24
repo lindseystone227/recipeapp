@@ -2906,6 +2906,11 @@ bootstrap-switch-button-react@^1.2.0:
   dependencies:
     react "^16.11.0"
 
+bootstrap-switch-button@^1.1.0:
+  version "1.1.0"
+  resolved "https://ramseysolutions.jfrog.io/artifactory/api/npm/npm/bootstrap-switch-button/-/bootstrap-switch-button-1.1.0.tgz#f59136172fa8b7c8eef781193803b9fb467038a0"
+  integrity sha512-RvEkM8Ig5tetj/mPzmehEUlPdEXnmo/KkvkXwBbr1R8X8YtNBAAH+/sdcO3oaRLxSSwDw70aC201D8Ee8N82Iw==
+
 bootstrap@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.2.0.tgz#838727fb60f1630db370fe57c63cbcf2962bb3d3"
