@@ -28,7 +28,7 @@ function findFrac(x: number) {
   }
 
   //a > b
-  function gcd(a: number, b: number) {
+  function gcd(a: number, b: number): number {
     if(a === 0) {
       return b;
     } else if(b === 0) {
