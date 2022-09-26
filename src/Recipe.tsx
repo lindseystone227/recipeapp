@@ -2,6 +2,7 @@ import React from 'react';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
 import Double from './Double';
+import findFrac from './euclid';
 
 interface RecipeProps{
   recipe: recipeType;
@@ -20,7 +21,9 @@ function Recipe(props: RecipeProps) {
             <Accordion.Body>
               <ul>{ props.recipe.ingredients.map((ingredient) => 
                 ( <li>{ 
-                    ingredient.qty ? `${(ingredient.qty)} ${ingredient.desc}` : ingredient.desc
+                    ingredient.qty 
+                      ? `${findFrac(ingredient.qty)} ${ingredient.desc}` 
+                      : ingredient.desc
                  }</li> ))
                 }
               </ul>

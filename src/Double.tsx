@@ -1,15 +1,22 @@
-import React from 'react';
+import { useState } from 'react'
 import { Recipe as recipeType } from './recipeType';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+import findFrac from './euclid'
 
 interface RecipeProps{
   recipe: recipeType;
 }
 
 function Double(props: RecipeProps) {
+
+  const [showDoubled, setShowDoubled] = useState<boolean>(false);
+
   function doubleRecipe() {
     props.recipe.ingredients.map((ingredient) => (
-      console.log(ingredient.qty ? `${ingredient.qty * 2} ${ingredient.desc}` : `${ingredient.desc}`)
+      console.log(ingredient.qty 
+        ? `${findFrac(ingredient.qty * 2)} ${ingredient.desc}` 
+        : `${ingredient.desc}`
+      )
     ));
   }
   
@@ -19,9 +26,11 @@ function Double(props: RecipeProps) {
       onlabel='Show original recipe' 
       offlabel='Show doubled recipe'
       onstyle='secondary' 
-      onChange={doubleRecipe}
+      onChange={(checked: boolean)=> {
+        setShowDoubled(checked ? false : true);
+        showDoubled ? doubleRecipe() : console.log('not doubled');
+      }}
       width={200}
-      // Is there a way to see a list of all the possible blue things?
     />
   );
 }
