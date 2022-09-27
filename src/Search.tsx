@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Recipe } from './recipeType';
-import { Link } from 'react-router-dom';
 import { fetche } from './helpers';
 
 interface SearchProps {

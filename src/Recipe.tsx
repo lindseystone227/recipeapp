@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
 import Double from './Double';
@@ -10,6 +10,13 @@ interface RecipeProps{
 
 function Recipe(props: RecipeProps) {
 
+  const [recipe, setRecipe] = useState<recipeType>(props.recipe);
+
+  function handleDouble(newRecipe: recipeType) {
+    console.log('handleDouble', newRecipe);
+    setRecipe(newRecipe);
+  }
+
   return (
     <div>
       {
@@ -19,7 +26,7 @@ function Recipe(props: RecipeProps) {
           <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
-              <ul>{ props.recipe.ingredients.map((ingredient) => 
+              <ul>{ recipe.ingredients.map((ingredient) => 
                 ( <li>{ 
                     ingredient.qty 
                       ? `${findFrac(ingredient.qty)} ${ingredient.desc}` 
@@ -27,7 +34,7 @@ function Recipe(props: RecipeProps) {
                  }</li> ))
                 }
               </ul>
-              <Double recipe={props.recipe}/>
+              <Double recipe={props.recipe} onChange={handleDouble}/>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
