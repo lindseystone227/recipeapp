@@ -8,14 +8,14 @@ function findFrac(x: number) {
     let g = gcd(a, d);
     let ra = a / g;
     let rd = d / g;
-    if ( f === 0.33 ) {
+    if (0.32 < f && 0.34 > f) {
       ra = 1;
       rd = 3;
     };
-    if ( f === 0.66 ) {
+    if(0.65 < f && 0.67 > f) {
       ra = 2;
       rd = 3;
-    };
+    }
 
   function numDecimals(f: number) {
     let n = 0;

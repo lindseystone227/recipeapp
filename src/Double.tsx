@@ -14,7 +14,6 @@ function Double(props: RecipeProps) {
   const [showDoubled, setShowDoubled] = useState<boolean>(false);
 
   function doubleIngredients() {
-    // make this function return the array of doubled ingredients
     let doubledIngredientsArray : Ingredient[] = [];
     props.recipe.ingredients.map((ingredient) => (
       ingredient.qty 
