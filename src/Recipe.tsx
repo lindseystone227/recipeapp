@@ -3,6 +3,7 @@ import { Recipe as recipeType } from './recipeType';
 import Accordion from 'react-bootstrap/Accordion';
 import Double from './Double';
 import findFrac from './euclid';
+import { Ingredient } from './helpers';
 
 interface RecipeProps{
   recipe: recipeType;
@@ -10,23 +11,32 @@ interface RecipeProps{
 
 function Recipe(props: RecipeProps) {
 
-  const [recipe, setRecipe] = useState<recipeType>(props.recipe);
+  const [doubled, setDoubled] = useState<boolean>(false);
 
-  function handleDouble(newRecipe: recipeType) {
-    console.log('handleDouble', newRecipe);
-    setRecipe(newRecipe);
+  function handleDouble(double: boolean) {
+    setDoubled(double);
+  }
+
+  function doubleIngredient(ingredient: Ingredient): Ingredient {
+    let newIngredient: Ingredient = {qty: ingredient.qty * 2, desc: ingredient.desc}
+    return newIngredient;
+  }
+
+  function originalIngredient(ingredient: Ingredient): Ingredient {
+    let originalIngredient: Ingredient = {qty: ingredient.qty, desc: ingredient.desc}
+    return originalIngredient;
   }
 
   return (
     <div>
       {
-         (  
+        (  
           <div className="accordionParent">
           <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
-              <ul>{ recipe.ingredients.map((ingredient) => 
+              <ul>{ props.recipe.ingredients.map(doubled ? doubleIngredient : originalIngredient ).map((ingredient) => 
                 ( <li>{ 
                     ingredient.qty 
                       ? `${findFrac(ingredient.qty)} ${ingredient.desc}` 
@@ -34,7 +44,7 @@ function Recipe(props: RecipeProps) {
                  }</li> ))
                 }
               </ul>
-              <Double recipe={props.recipe} onChange={handleDouble}/>
+              <Double onChange={handleDouble}/>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">

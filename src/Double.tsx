@@ -1,31 +1,12 @@
-import { useState } from 'react'
-import { Recipe as recipeType } from './recipeType';
+import React from 'react'
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
-import findFrac from './euclid';
-import { Ingredient } from './helpers';
 
-interface RecipeProps{
-  recipe: recipeType
-  onChange: (recipe: recipeType) => void;
+interface RecipeProps {
+  onChange: (double: boolean) => void;
 }
 
 function Double(props: RecipeProps) {
 
-  const [showDoubled, setShowDoubled] = useState<boolean>(false);
-
-  function doubleIngredients() {
-    let doubledIngredientsArray : Ingredient[] = [];
-    props.recipe.ingredients.map((ingredient) => (
-      ingredient.qty 
-      ? doubledIngredientsArray.push(
-          {qty: 0, desc: `${findFrac(ingredient.qty * 2)} ${ingredient.desc}`}
-        )
-      : doubledIngredientsArray.push({qty: 0, desc: ingredient.desc})
-    ));
-
-    return doubledIngredientsArray
-  }
-  
   return (
     <BootstrapSwitchButton 
       checked={false}
@@ -33,18 +14,7 @@ function Double(props: RecipeProps) {
       offlabel='Show doubled recipe'
       onstyle='secondary' 
       onChange={(checked: boolean)=> {
-        setShowDoubled(checked ? false : true);
-        let newRecipe : recipeType = {
-          id: 1231231, 
-          title: 'thetitle', 
-          ingredients: [], 
-          instructions: [], 
-          photo: ''
-        };
-        newRecipe.ingredients = showDoubled 
-          ? doubleIngredients() 
-          : props.recipe.ingredients;
-        props.onChange(newRecipe);
+        props.onChange(checked);
       }}
       width={200}
     />
