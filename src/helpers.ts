@@ -386,7 +386,7 @@ const recipes: Recipe[] =
         "Blend the ingredients in a blender.", 
         "Cook in a pan over medium heat."
       ],
-      "photo": "chickencasserole.jpg"
+      "photo": "cinnamonpancakes.jpg"
     },
     {
       "id": 10,
@@ -446,7 +446,7 @@ const recipes: Recipe[] =
         "Bring the pan to a boil, then simmer for 10-15 minutes (or until the potatoes are tender).",
         "Serve over quinoa or brown rice."
       ],
-      "photo": "chickencasserole.jpg"
+      "photo": "chickencurry.jpg"
     },
     {
       "id": 11,

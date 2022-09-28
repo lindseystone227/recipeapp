@@ -1,61 +1,60 @@
-function findFrac(x: number) {
+function findFrac(input: number) {
 
-    let w = Math.floor(x);
-    let f = x - w;
-    let n = numDecimals(f);
-    let d = 10**n;
-    let a = f*d;
-    let g = gcd(a, d);
-    let ra = a / g;
-    let rd = d / g;
-    if (0.32 < f && 0.34 > f) {
-      ra = 1;
-      rd = 3;
+    let whole = Math.floor(input);
+    let decimal = input - whole;
+    let decimalPlaces = numDecimals(decimal);
+    let denominator = 10**decimalPlaces;
+    let numerator = decimal*denominator;
+    let comDenom = gcd(denominator, numerator);
+    let newNum = numerator / comDenom;
+    let newDenom = denominator / comDenom;
+    if (0.32 < decimal && 0.34 > decimal) {
+      newNum = 1;
+      newDenom = 3;
     };
-    if(0.65 < f && 0.67 > f) {
-      ra = 2;
-      rd = 3;
+    if(0.65 < decimal && 0.67 > decimal) {
+      newNum = 2;
+      newDenom = 3;
     }
 
-  function numDecimals(f: number) {
+  function numDecimals(decimal: number) {
     let n = 0;
-    while(f > 0) {
-      f *= 10;
-      f -= Math.floor(f);
+    while(decimal > 0) {
+      decimal *= 10;
+      decimal -= Math.floor(decimal);
       n += 1;
     }
     return n;
   }
 
-  //a > b
-  function gcd(a: number, b: number): number {
-    if(a === 0) {
-      return b;
-    } else if(b === 0) {
-      return a;
+  function gcd(denominator: number, numerator: number): number {
+    if(denominator === 0) {
+      return numerator;
+    } else if(numerator === 0) {
+      return denominator;
     } else {
-      let r = (a % b);
-      return gcd(b, r);
+      let remainder = (denominator % numerator);
+      return gcd(numerator, remainder);
     }
   }
 
-  function present(w: number, ra: number, rd: number) {
-    let z = '0';
-    if( w !== 0 && ra !== 0 && rd !== 0) {
-      z = (`${w} ${ra}/${rd}`);
-    } else if ( w !== 0 && ra !== 0 && rd === 0 ) {
-      z = (`${w}`);
-    } else if ( w !== 0 && ra === 0 && rd !== 0 ) {
-      z = (`${w}`);
-    } else if (w === 0 && ra !== 0 && rd !== 0 ) {
-      z = (`${ra}/${rd}`);
+  function present(whole: number, newNum: number, newDenom: number) {
+    let quantity = '0';
+    if( whole !== 0 && newNum !== 0 && newDenom !== 0) {
+      quantity = (`${whole} ${newNum}/${newDenom}`);
+    } else if ( whole !== 0 && newNum !== 0 && newDenom === 0 ) {
+      quantity = (`${whole}`);
+    } else if ( whole !== 0 && newNum === 0 && newDenom !== 0 ) {
+      quantity = (`${whole}`);
+    } else if (whole === 0 && newNum !== 0 && newDenom !== 0 ) {
+      quantity = (`${newNum}/${newDenom}`);
     } else {
-      z = ('weird case');
+      quantity = ('weird case');
     }
-    return (z);
+    return (quantity);
   }
 
-  return ( present(w, ra, rd ) );
+  return ( present(whole, newNum, newDenom ) );
 }
 
 export default findFrac;
