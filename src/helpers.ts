@@ -262,15 +262,56 @@ const recipes: Recipe[] =
       "title": "Chicken Casserole",
       "ingredients": [
         {
-          qty: 1,
-          desc: "asdf"
+          qty: 0.66,
+          desc: "cups shredded chicken breast"
         },
         {
           qty: 1,
-          desc: "asdf"
+          desc: "cup cooked quinoa"
+        },
+        {
+          qty: 0.25,
+          desc: "cup egg whites"
+        },
+        {
+          qty: 1,
+          desc: "cup kale"
+        },
+        {
+          qty: 1,
+          desc: "diced green onion"
+        },
+        {
+          qty: 2,
+          desc: "Tbs salsa"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp chili powder"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp cumin"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp garlic powder"
+        },
+        {
+          qty: 0,
+          desc: "Salt and pepper to taste"
         }
       ],
-      "instructions": ["asdf6", "asdf6"],
+      "instructions": [
+        "Place the kale in a large bowl and sprinkle it with salt.",
+        "Then rub the kale between your fingers until it becomes wilted.",
+        "Add the chicken, quinoa, salsa, green onion, and spices to the bowl.",
+        "Pour in the egg whites and combine.",
+        "Spray a casserole dish with non-stick spray, then transfer the ingredients from the bowl to the dish.",
+        "Gently press the ingredients down.",
+        "Bake for 20 minutes at 350 degrees.",
+        "Then broil for 10 minutes at 500 degrees, or until the top is slightly browned."
+      ],
       "photo": "chickencasserole.jpg"
     },
     {
