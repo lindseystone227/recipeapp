@@ -60,6 +60,11 @@ a:active {
   gap: 10px;
 }
 
+ol {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
 .check {
   margin-top: 6px;
 }
