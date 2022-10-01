@@ -14,7 +14,7 @@ function Double(props: RecipeProps) {
       offlabel='Show doubled recipe'
       onstyle='secondary' 
       onChange={(checked: boolean)=> {
-        props.onChange(checked);
+        props.onChange(checked); //we are calling handleDouble from the Recipe file. its name in this file is onChange
       }}
       width={200}
     />

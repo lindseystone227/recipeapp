@@ -54,6 +54,16 @@ a:active {
     ) !important;
 }
 
+.instructions {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.check {
+  margin-top: 6px;
+}
+
 .search {
   position: relative;
 }

@@ -18,7 +18,8 @@ function Recipe(props: RecipeProps) {
   }
 
   function doubleIngredient(ingredient: Ingredient): Ingredient {
-    let newIngredient: Ingredient = {qty: ingredient.qty * 2, desc: ingredient.desc}
+    let factor = 2; //change this to be a variable
+    let newIngredient: Ingredient = {qty: ingredient.qty * factor, desc: ingredient.desc}
     return newIngredient;
   }
 
@@ -51,7 +52,12 @@ function Recipe(props: RecipeProps) {
             <Accordion.Header>Instructions</Accordion.Header>
             <Accordion.Body>
               <ol>{ props.recipe.instructions.map((instruction: string) =>
-                  ( <li>{ instruction }</li>)) 
+                  (
+                    <div className="instructions">
+                      <input className="check" type="checkbox"></input>
+                      <li style={{listStyleType: "none"}}>{ instruction }</li>
+                    </div >
+                  )) 
                 }
               </ol>
             </Accordion.Body>
