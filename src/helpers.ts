@@ -381,7 +381,7 @@ const recipes: Recipe[] =
         }
       ],
       "instructions": [
-        "Cook the ground turke in a pan until brown.", 
+        "Cook the ground turkey in a pan until brown.", 
         "Chop the red bell pepper.",
         "Whisk the eggs, milk, and spices together in a large bowl.",
         "Stir in the ground turkey and bell pepper.",
