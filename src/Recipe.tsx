@@ -38,7 +38,7 @@ function Recipe(props: RecipeProps) {
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
               <ul>{ props.recipe.ingredients.map(doubled ? doubleIngredient : originalIngredient ).map((ingredient) => 
-                ( <li>{ 
+                ( <li key={ingredient.desc}>{ 
                     ingredient.qty 
                       ? `${findFrac(ingredient.qty)} ${ingredient.desc}` 
                       : ingredient.desc
@@ -53,7 +53,7 @@ function Recipe(props: RecipeProps) {
             <Accordion.Body>
               <ol>{ props.recipe.instructions.map((instruction: string) =>
                   (
-                    <div className="instructions">
+                    <div key={instruction} className="instructions">
                       <input className="check" type="checkbox"></input>
                       <li style={{listStyleType: "none"}}>{ instruction }</li>
                     </div >
