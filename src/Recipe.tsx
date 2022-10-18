@@ -37,8 +37,8 @@ function Recipe(props: RecipeProps) {
           <Accordion.Item eventKey="0">
             <Accordion.Header>Ingredients</Accordion.Header>
             <Accordion.Body>
-              <ul>{ props.recipe.ingredients.map(doubled ? doubleIngredient : originalIngredient ).map((ingredient) => 
-                ( <li key={ingredient.desc}>{ 
+              <ul>{ props.recipe.ingredients.map(doubled ? doubleIngredient : originalIngredient ).map((ingredient, index) => 
+                ( <li key={`${props.recipe.id}-0-${index}`}>{ 
                     ingredient.qty 
                       ? `${findFrac(ingredient.qty)} ${ingredient.desc}` 
                       : ingredient.desc
@@ -51,9 +51,9 @@ function Recipe(props: RecipeProps) {
           <Accordion.Item eventKey="1">
             <Accordion.Header>Instructions</Accordion.Header>
             <Accordion.Body>
-              <ol>{ props.recipe.instructions.map((instruction: string) =>
+              <ol>{ props.recipe.instructions.map((instruction: string, index) =>
                   (
-                    <div key={instruction} className="instructions">
+                    <div key={`${props.recipe.id}-1-${index}`} className="instructions">
                       <input className="check" type="checkbox"></input>
                       <li style={{listStyleType: "none"}}>{ instruction }</li>
                     </div >

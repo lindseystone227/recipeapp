@@ -13,9 +13,10 @@ function Double(props: RecipeProps) {
       onlabel='Show original recipe' 
       offlabel='Show doubled recipe'
       onstyle='secondary' 
-      onChange={(checked: boolean)=> {
-        props.onChange(checked); //we are calling handleDouble from the Recipe file. its name in this file is onChange
-      }}
+      // onChange={(checked: boolean)=> {
+      //   props.onChange(checked); //we are calling handleDouble from the Recipe file. its name in this file is onChange
+      // }}
+      onChange={props.onChange}
       width={200}
     />
   );
