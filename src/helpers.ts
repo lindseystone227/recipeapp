@@ -568,7 +568,7 @@ const recipes: Recipe[] =
         "Bake for 22 min at 350.",
         "Let the muffins cool, then top with honey and cinnamon."
       ],
-      "photo": "chickencasserole.jpg"
+      "photo": "comingsoon.jpg"
     },
     {
       "id": 13,
@@ -604,7 +604,150 @@ const recipes: Recipe[] =
         "Flatten the cookie balls with a wet spoon.",
         "Bake for 10 minutes at 350."
       ],
-      "photo": "chickencasserole.jpg"
+      "photo": "comingsoon.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Brownie in a Mug",
+      "ingredients": [
+        {
+          qty: 3,
+          desc: "Tbs almond flour"
+        },
+        {
+          qty: 1,
+          desc: "Tbs cocoa powder"
+        },
+        {
+          qty: 1,
+          desc: "Tbs monk fruit sweetener"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp baking powder"
+        },
+        {
+          qty: 1,
+          desc: "Tbs olive oil"
+        },
+        {
+          qty: 1,
+          desc: "egg"
+        }
+      ],
+      "instructions": [
+        "Mix the dry ingredients together in a bowl.", 
+        "Add the wet ingredients and stir.",
+        "Spray a mug with non-stick spray.",
+        "Microwave for 45 seconds."
+      ],
+      "photo": "brownie.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Pumpkin Pie Oatmeal",
+      "ingredients": [
+        {
+          qty: 1,
+          desc: "cup steel cut oats"
+        },
+        {
+          qty: 2.5,
+          desc: "cups water"
+        },
+        {
+          qty: 1.5,
+          desc: "cups oat milk"
+        },
+        {
+          qty: 1,
+          desc: "cup canned pumpkin"
+        },
+        {
+          qty: 3,
+          desc: "Tbs real maple syrup"
+        },
+        {
+          qty: 1,
+          desc: "tsp vanilla"
+        },
+        {
+          qty: 1,
+          desc: "tsp pumpkin pie spice"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp cinnamon"
+        },
+        {
+          qty: 0.25,
+          desc: "tsp salt"
+        }
+      ],
+      "instructions": [
+        "Spray a slow cooker with cooking spray.", 
+        "Add the ingredients to the slow cooker and stir.",
+        "Cook on low for 7 hours.",
+        "Top with nuts."
+      ],
+      "photo": "pumpkinpieoatmeal.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Chicken Stew",
+      "ingredients": [
+        {
+          qty: 1.5,
+          desc: "pounds boneless, skinless chicken breast"
+        },
+        {
+          qty: 2,
+          desc: "medium sweet potatoes"
+        },
+        {
+          qty: 3,
+          desc: "large carrots"
+        },
+        {
+          qty: 28,
+          desc: "oz diced, fire roasted tomatoes"
+        },
+        {
+          qty: 3,
+          desc: "cups low sodium chicken broth"
+        },
+        {
+          qty: 1,
+          desc: "tsp salt"
+        },
+        {
+          qty: 1,
+          desc: "tsp garlic powder"
+        },
+        {
+          qty: 1,
+          desc: "tsp paprika"
+        },
+        {
+          qty: 1,
+          desc: "tsp oregano"
+        },
+        {
+          qty: 0.5,
+          desc: "tsp pepper"
+        }
+      ],
+      "instructions": [
+        "Chop the sweet potatoes into ~1 inch cubes.",
+        "Chop the carrots into ~1/2 inch sections.",
+        "Add the chicken, potatoes, carrots, and tomatoes to a slow cooker.",
+        "Cover the ingredients with chicken broth.",
+        "Add in the spices.",
+        "Cook on low for 7 hours.",
+        "Shred the chicken with two forks.",
+        "Stir, then serve the stew in a bowl and top with fresh basil if desired."
+      ],
+      "photo": "comingsoon.jpg"
     }
   ];
 
