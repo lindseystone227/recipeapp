@@ -748,6 +748,66 @@ const recipes: Recipe[] =
         "Stir, then serve the stew in a bowl and top with fresh basil if desired."
       ],
       "photo": "comingsoon.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Pumpkin Muffins",
+      "ingredients": [
+        {
+          qty: 1.5,
+          desc: "cups oat flour"
+        },
+        {
+          qty: 0.25,
+          desc: "cup oats"
+        },
+        {
+          qty: 1.5,
+          desc: "tsp cinnamon"
+        },
+        {
+          qty: 1,
+          desc: "tsp baking soda"
+        },
+        {
+          qty: 0.25,
+          desc: "tsp baking powder"
+        },
+        {
+          qty: 1,
+          desc: "egg"
+        },
+        {
+          qty: 1,
+          desc: "cup honey"
+        },
+        {
+          qty: 0.25,
+          desc: "cup almond milk"
+        },
+        {
+          qty: 1,
+          desc: "tsp vanilla extract"
+        },
+        {
+          qty: 1,
+          desc: "cup pumpkin puree"
+        },
+        {
+          qty: 0.25,
+          desc: "cup walnuts"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 350 degrees.",
+        "Mix the dry ingredients (oat flour, oats, cinnamon, baking soda, baking powder) together in a large bowl.",
+        "Lighly mix the wet ingredients (egg, honey, almond milk, vanilla extract) together in a separate bowl.",
+        "Make a hole in the center of the dry ingredients and pour in the wet ingredients. Fold the ingredients together with a spatula. Do not over mix.",
+        "Fold in the pumpkin puree until everything is combined.",
+        "Generously spray a muffin tin with non-stick spray, then fill each cup about 3/4 full.",
+        "Sprinkle the muffins with walnuts. Bake for 18-20 minutes, until the muffin tops are golden brown."
+      ],
+      "photo": "pumpkinmuffins.jpg"
     }
   ];
 
