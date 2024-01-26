@@ -6,9 +6,9 @@ import {
   Route,
 } from 'react-router-dom';
 import './index.css';
-import Recipes from './Recipes';
-// import Recipe from './Recipe';
 import reportWebVitals from './reportWebVitals';
+import Recipes from './Recipes';
+import ChickpeaCurry from '../src/Details/ChickpeaCurry';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,8 +17,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Recipes />}/>
-        {/* <Route path="/recipes/:id" element={<Recipes />}/> */}
+        <Route path="/" element={<div className="bg-background"><Recipes /></div>}/>
+        <Route path="/chickpeacurry" element={<div className="bg-background"><ChickpeaCurry /></div>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

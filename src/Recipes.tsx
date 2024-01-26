@@ -1,52 +1,33 @@
-import React, { useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { Recipe } from './recipeType';
-import { Search } from './Search';
-import { fetche } from './helpers';
-import Recipee from './Recipe';
+import React from 'react';
+import Recipe from './Recipe';
+import Filter from './Filter';
 
 function Recipes() {
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
-  const [currentRecipe, setCurrentRecipe] = useState<Recipe | null>(); 
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-
-  useEffect(() => {
-    fetche('http://localhost:3001/recipes').then((result) =>
-      result.json()
-    ).then((result: Recipe[]) => {
-      setRecipes(result);
-      setCurrentRecipe(result[0]);
-    });
-  }, []);
   return (
     <>
-    <Search onSearch={(recipe: Recipe) => {
-      setCurrentSlide(recipes.indexOf(recipe))
-    }} />
-    <br></br>
-    <br></br>
-    <h1>{currentRecipe && currentRecipe.title}</h1>
-    <Carousel
-      interval={null} 
-      onSlide={(eventKey: number, direction: 'end' | 'start') => {
-        setCurrentRecipe(recipes[eventKey])
-      }}
-      activeIndex={currentSlide}
-      onSelect={(eventKey: number, event: Record<string, unknown> | null) => {setCurrentSlide(eventKey)}}
-    >
-      {recipes.map((recipe: Recipe) => (
-        <Carousel.Item key={recipe.id}>
-        <div className="imageParent">
-        <img
-          src={recipe.photo}
-          alt={recipe.title}
-          className="photo"
-        />
-        </div>
-      </Carousel.Item>
-      ))}
-    </Carousel>
-    {currentRecipe && <Recipee recipe={currentRecipe}/>}
+      <h1 className="p-4 text-3xl text-title font-sans">lindsey's recipes</h1>
+      <div className="flex ml-2 mr-2 mb-2">
+        <Filter title={'Main'} link={'/'}/>
+        <Filter title={'Side'} link={'/'}/>
+        <Filter title={'Breakfast'} link={'/'}/>
+        <Filter title={'Dessert'} link={'/'}/>
+      </div>
+      <div className="p-2 flex flex-wrap justify-evenly">
+        <Recipe title={'Chickpea Curry'} photo={'/chickpeacurry.jpg'} path='/chickpeacurry' />
+        <Recipe title={'Almond Flour Bread'} photo={'/almondflourbread.jpg'} path='/almondflourbread'/>
+        <Recipe title={'Sweet Potato Salad'} photo={'/sweetpotatosalad.jpg'} path='/sweetpotatosalad'/>
+        <Recipe title={'Pumpkin Muffins'} photo={'/pumpkinmuffins.jpg'} path='/pumpkinmuffins'/>
+        <Recipe title={'Autumn Chicken'} photo={'/autumnchicken.jpg'} path='/autumnchicken'/>
+        <Recipe title={'Carrot Muffins'} photo={'/carrotmuffins.jpg'} path='/carrotmuffins'/>
+        <Recipe title={'Pumpkin Pie'} photo={'/pumpkinpie.jpg'} path='/pumpkinpie'/>
+        <Recipe title={'Chicken Curry'} photo={'/chickencurry.jpg'} path='/chickencurry'/>
+        <Recipe title={'Sausage Patties'} photo={'/sausagepatties.jpg'} path='/sausagepatties'/>
+        <Recipe title={'Lemon Muffins'} photo={'/lemonmuffins.jpg'} path='/lemonmunffins'/>
+        <Recipe title={'Banana Pancakes'} photo={'/bananapancakes.jpg'} path='/bananapancakes'/>
+        <Recipe title={'Almond Flour Biscuits'} photo={'/biscuits.jpg'} path='/almondflourbiscuits'/>
+        <Recipe title={'Cinnamon Pancakes'} photo={'/cinnamonpancakes.jpg'} path='/cinnamonpancakes'/>
+        <Recipe title={'Pumpkin Pie Oatmeal'} photo={'/pumpkinpieoatmeal.jpg'} path='/pumpkinpieoatmeal'/>
+      </div>
     </>
   );
 }
