@@ -4,11 +4,15 @@ interface RecipeProps {
   title: string;
   photo: string;
   path: string;
+  filter: boolean;
+  filters: boolean[];
 }
 
 function Recipe(RecipeProps: RecipeProps) {
+  const noFiltersSelected = RecipeProps.filters.every((filter) => filter === false);
+
   return (
-    <div className="mb-4 w-36">
+    <div className={(RecipeProps.filter || noFiltersSelected) ? "mb-4 w-36" : "hidden"}>
       <div className="flex justify-center items-center w-32 h-32 rounded-full overflow-hidden">
         <img src={RecipeProps.photo} alt={RecipeProps.title} />
       </div>
@@ -18,3 +22,8 @@ function Recipe(RecipeProps: RecipeProps) {
 }
 
 export default Recipe;
+
+// if no filters selected = display
+// if only filter is selected = display
+// if a filter is selected that's not filter AND filter is selected = display
+// if only a filter is selected that's not filter = displayNone

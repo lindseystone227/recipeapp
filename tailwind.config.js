@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'background': '#84a182',
-        'title': '#182e16',
+        'title': '#182e16 !important',
       },
       fontFamily: {
         sans: ['Dancing Script', 'system-ui', '-apple-system', 'BlinkMacSystemFont'],
