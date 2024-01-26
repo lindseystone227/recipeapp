@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div className="bg-background"><Recipes /></div>}/>
+        <Route path="/" element={<div className="min-h-screen bg-background"><Recipes /></div>}/>
         <Route path="/chickpeacurry" element={<div className="bg-background"><ChickpeaCurry /></div>}/>
       </Routes>
     </BrowserRouter>

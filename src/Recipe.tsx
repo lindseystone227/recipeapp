@@ -22,8 +22,3 @@ function Recipe(RecipeProps: RecipeProps) {
 }
 
 export default Recipe;
-
-// if no filters selected = display
-// if only filter is selected = display
-// if a filter is selected that's not filter AND filter is selected = display
-// if only a filter is selected that's not filter = displayNone
