@@ -47,9 +47,10 @@ function Recipes() {
         <Recipe title={'Sausage Patties'} photo={'/sausagepatties.jpg'} filter={breakfastFilter} filters={filters}/>
         <Recipe title={'Lemon Muffins'} photo={'/lemonmuffins.jpg'} filter={sideFilter} filters={filters}/>
         <Recipe title={'Banana Pancakes'} photo={'/bananapancakes.jpg'} filter={breakfastFilter} filters={filters}/>
-        <Recipe title={'Almond Flour Biscuits'} photo={'/biscuits.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Almond Flour Biscuits'} photo={'/almondflourbiscuits.jpg'} filter={sideFilter} filters={filters}/>
         <Recipe title={'Cinnamon Pancakes'} photo={'/cinnamonpancakes.jpg'} filter={breakfastFilter} filters={filters}/>
         <Recipe title={'Pumpkin Pie Oatmeal'} photo={'/pumpkinpieoatmeal.jpg'} filter={breakfastFilter} filters={filters}/>
+        <Recipe title={'Taco Bowl'} photo={'/tacobowl.jpg'} filter={mainFilter} filters={filters}/>
       </div>
     </>
   );
