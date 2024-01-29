@@ -36,20 +36,20 @@ function Recipes() {
         <Filter title={'Dessert'} link={'/'} onClick={useDessertFilter} filterOn={dessertFilter}/>
       </div>
       <div className="p-2 flex flex-wrap justify-evenly">
-        <Recipe title={'Chickpea Curry'} photo={'/chickpeacurry.jpg'} path='/chickpeacurry' filter={mainFilter} filters={filters}/>
-        <Recipe title={'Almond Flour Bread'} photo={'/almondflourbread.jpg'} path='/almondflourbread'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Sweet Potato Salad'} photo={'/sweetpotatosalad.jpg'} path='/sweetpotatosalad'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Pumpkin Muffins'} photo={'/pumpkinmuffins.jpg'} path='/pumpkinmuffins'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Autumn Chicken'} photo={'/autumnchicken.jpg'} path='/autumnchicken'filter={mainFilter} filters={filters}/>
-        <Recipe title={'Carrot Muffins'} photo={'/carrotmuffins.jpg'} path='/carrotmuffins'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Pumpkin Pie'} photo={'/pumpkinpie.jpg'} path='/pumpkinpie'filter={dessertFilter} filters={filters}/>
-        <Recipe title={'Chicken Curry'} photo={'/chickencurry.jpg'} path='/chickencurry'filter={mainFilter} filters={filters}/>
-        <Recipe title={'Sausage Patties'} photo={'/sausagepatties.jpg'} path='/sausagepatties'filter={breakfastFilter} filters={filters}/>
-        <Recipe title={'Lemon Muffins'} photo={'/lemonmuffins.jpg'} path='/lemonmunffins'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Banana Pancakes'} photo={'/bananapancakes.jpg'} path='/bananapancakes'filter={breakfastFilter} filters={filters}/>
-        <Recipe title={'Almond Flour Biscuits'} photo={'/biscuits.jpg'} path='/almondflourbiscuits'filter={sideFilter} filters={filters}/>
-        <Recipe title={'Cinnamon Pancakes'} photo={'/cinnamonpancakes.jpg'} path='/cinnamonpancakes'filter={breakfastFilter} filters={filters}/>
-        <Recipe title={'Pumpkin Pie Oatmeal'} photo={'/pumpkinpieoatmeal.jpg'} path='/pumpkinpieoatmeal'filter={breakfastFilter} filters={filters}/>
+        <Recipe title={'Chickpea Curry'} photo={'/chickpeacurry.jpg'} filter={mainFilter} filters={filters}/>
+        <Recipe title={'Almond Flour Bread'} photo={'/almondflourbread.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Sweet Potato Salad'} photo={'/sweetpotatosalad.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Pumpkin Muffins'} photo={'/pumpkinmuffins.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Autumn Chicken'} photo={'/autumnchicken.jpg'} filter={mainFilter} filters={filters}/>
+        <Recipe title={'Carrot Muffins'} photo={'/carrotmuffins.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Pumpkin Pie'} photo={'/pumpkinpie.jpg'} filter={dessertFilter} filters={filters}/>
+        <Recipe title={'Chicken Curry'} photo={'/chickencurry.jpg'} filter={mainFilter} filters={filters}/>
+        <Recipe title={'Sausage Patties'} photo={'/sausagepatties.jpg'} filter={breakfastFilter} filters={filters}/>
+        <Recipe title={'Lemon Muffins'} photo={'/lemonmuffins.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Banana Pancakes'} photo={'/bananapancakes.jpg'} filter={breakfastFilter} filters={filters}/>
+        <Recipe title={'Almond Flour Biscuits'} photo={'/biscuits.jpg'} filter={sideFilter} filters={filters}/>
+        <Recipe title={'Cinnamon Pancakes'} photo={'/cinnamonpancakes.jpg'} filter={breakfastFilter} filters={filters}/>
+        <Recipe title={'Pumpkin Pie Oatmeal'} photo={'/pumpkinpieoatmeal.jpg'} filter={breakfastFilter} filters={filters}/>
       </div>
     </>
   );
